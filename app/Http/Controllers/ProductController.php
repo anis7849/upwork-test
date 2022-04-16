@@ -32,7 +32,7 @@ class ProductController extends Controller
                 $query->where('id', $author_id);
             }
          })
-        ->paginate(2);
+        ->get();
 
 
         return view('product.index',['authors' => $authors,'products' => $products]);
